@@ -1,0 +1,19 @@
+========
+0. emerge --sync; [Настройка /etc/portage/make.conf и прочих параметров портажа] ;emerge -1 --nodeps portage
+1. emerge -1 --nodeps linux-headers glibc
+2. emerge -1 --nodeps binutils
+3. eselect binutils list
+4. eselect binutils set [LastVersion]
+5. далее обновить GCC по инструкции https://wiki.gentoo.org/wiki/Upgrading_GCC
+6. emerge -1 --nodeps glibc binutils gcc и обновить ядро
+7. emerge -1 --nodeps perl perl-cleaner
+8. perl-cleaner --reallyall
+9. emerge -1 python
+10. python-updater
+11. emerge -uDN --with-bdeps=y @system
+12. emerge -uDN --with-bdeps=y @world
+13. emerge --depclean [-pv]
+Каждый шаг надо повторять до тех пор, пока он закончится без ошибок.
+Начиная с 7 шага, а то и раньше, в зависимости от вашей конфигурации и отсталости, возможно придется реагировать
+интерактивно на разные блокировки и несовместимости флагов.
+=====
