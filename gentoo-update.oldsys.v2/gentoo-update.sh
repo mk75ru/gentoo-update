@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo "Gentoo update"
 
 
 emerge -uDNav @world \

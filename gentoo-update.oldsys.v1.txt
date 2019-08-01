@@ -1,3 +1,4 @@
+Обновление давно не обновлявшейся системы Вариант-1
 ========
 0. emerge --sync; [Настройка /etc/portage/make.conf и прочих параметров портажа] ;emerge -1 --nodeps portage
 1. emerge -1 --nodeps linux-headers glibc

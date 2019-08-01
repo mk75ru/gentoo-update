@@ -1,0 +1,22 @@
+Обновление давно не обновлявшейся системы Вариант-2
+========
+Отмонтируем кроссовые директории
+~# sudo umount-cross-dirs.sh
+
+Удаляем портежи
+~# sudo rm-usr-portage.sh
+
+Заходим на сайт http://mirror.cse.iitk.ac.in/gentoo/releases/snapshots/current
+
+Ищем файл с нужной датой в формате YYYYMMDD
+
+Загружаем портежи, подставив аргументом YYYYMMDD
+~# sudo download-portage.sh YYYYMMDD
+
+Монтируем кроссовые директории
+~# sudo mount-cross-dirs.sh
+
+Обновляем gentoo
+~# sudo gentoo-update.sh
+========
+
